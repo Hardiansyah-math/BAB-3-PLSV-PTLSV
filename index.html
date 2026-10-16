@@ -8,23 +8,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F2F6FA;--sf:#fff;--ink:#12263A;--mu:#51647A;--ln:#D5DEE8;--br:#0B6E8A;--bi:#fff;--am:#E9A12E;--ok:#1F8A5B;--bd:#C8453B;--so:#E3F1F5;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1A26;--sf:#162637;--ink:#EAF1F7;--mu:#9FB2C6;--ln:#2A3E53;--br:#4CC3DE;--bi:#08202B;--am:#F5B857;--ok:#4CC58C;--bd:#FF7D72;--so:#17384A;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0E1A26;--sf:#162637;--ink:#EAF1F7;--mu:#9FB2C6;--ln:#2A3E53;--br:#4CC3DE;--bi:#08202B;--am:#F5B857;--ok:#4CC58C;--bd:#FF7D72;--so:#17384A;color-scheme:dark}
+:root{--bg:#EEF4FF;--sf:#fff;--ink:#1B1B3A;--mu:#5A5F85;--ln:#D9DDF5;--br:#5B3FD9;--bi:#fff;--am:#FFB400;--ok:#0FA76B;--bd:#E5484D;--so:#ECE8FF;--hd:#5B3FD9;--p1:#FF6B9A;--p2:#19B5A5;--p3:#2E8BFF;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141233;--sf:#1E1B4B;--ink:#F3F1FF;--mu:#B4B1DC;--ln:#38347A;--br:#A794FF;--bi:#16123D;--am:#FFC83D;--ok:#3FD79A;--bd:#FF7D82;--so:#2B2763;--hd:#2A2475;--p1:#FF7FAA;--p2:#35D0C0;--p3:#5AA6FF;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141233;--sf:#1E1B4B;--ink:#F3F1FF;--mu:#B4B1DC;--ln:#38347A;--br:#A794FF;--bi:#16123D;--am:#FFC83D;--ok:#3FD79A;--bd:#FF7D82;--so:#2B2763;--hd:#2A2475;--p1:#FF7FAA;--p2:#35D0C0;--p3:#5AA6FF;color-scheme:dark}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 Lexend,system-ui,sans-serif}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--sf);z-index:10}
+body{margin:0;background:var(--bg) linear-gradient(165deg,color-mix(in srgb,var(--p3) 20%,var(--bg)) 0%,var(--bg) 42%,color-mix(in srgb,var(--p1) 18%,var(--bg)) 100%) fixed;color:var(--ink);font:400 16px/1.65 Lexend,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hd);z-index:10}
 h1,h2,h3{font-family:'Bricolage Grotesque',Lexend,sans-serif;line-height:1.15;margin:0 0 .5em}
-h1{font-size:clamp(2rem,6vw,3.2rem);font-weight:800}h2{font-size:1.6rem;margin-top:2em}h3{font-size:1.2rem}
+h1{font-size:clamp(2rem,6vw,3.2rem);font-weight:800;color:var(--br)}h2{font-size:1.6rem;margin-top:2em}h3{font-size:1.2rem}
 p{margin:0 0 1em;max-width:68ch}.mu{color:var(--mu)}
 .wrap{max-width:980px;margin:0 auto;padding:0 18px 56px}
-.top{position:sticky;top:env(safe-area-inset-top,0px);background:var(--sf);border-bottom:1px solid var(--ln);z-index:11}
+.top{position:sticky;top:env(safe-area-inset-top,0px);background:var(--hd);color:#fff;border-bottom:4px solid var(--am);z-index:11}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
-.brand{font:800 1.2rem 'Bricolage Grotesque',sans-serif}.brand small{display:block;font:400 .72rem Lexend;color:var(--mu)}
+.brand{font:800 1.2rem 'Bricolage Grotesque',sans-serif}.brand small{display:block;font:400 .72rem Lexend;color:rgba(255,255,255,.82)}
 #nav{display:flex;gap:4px;overflow-x:auto}
-#nav button{border:0;background:none;color:var(--mu);font:500 .95rem Lexend;padding:8px 16px;border-radius:99px;cursor:pointer}
-#nav button[aria-current=page]{background:var(--br);color:var(--bi)}
+#nav button{border:0;background:none;color:#fff;font:500 .95rem Lexend;padding:8px 16px;border-radius:99px;cursor:pointer}
+#nav button[aria-current=page]{background:var(--am);color:#2b1d00}
 button{font-family:inherit}
 :focus-visible{outline:3px solid var(--am);outline-offset:2px}
 .btn{border:2px solid var(--br);background:var(--br);color:var(--bi);font:600 1rem Lexend;padding:11px 22px;border-radius:12px;cursor:pointer}
@@ -33,7 +33,7 @@ button{font-family:inherit}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:36px 0 8px}
 @media(max-width:720px){.hero{grid-template-columns:1fr}}
 .lead{font-size:1.1rem;color:var(--mu)}
-.card{background:var(--sf);border:1px solid var(--ln);border-radius:16px;padding:20px;margin:14px 0}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:16px;padding:20px;margin:14px 0;box-shadow:0 6px 18px color-mix(in srgb,var(--br) 14%,transparent)}
 .goals{list-style:none;padding:0;margin:0}
 .goals li{background:var(--sf);border:1px solid var(--ln);border-radius:12px;margin:8px 0}
 .goals label{display:flex;gap:12px;padding:14px 16px;cursor:pointer;align-items:flex-start}
@@ -45,7 +45,7 @@ button{font-family:inherit}
 .terms span{background:var(--so);border-radius:10px;padding:2px 14px}
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 12px}
 .tabs button{border:1.5px solid var(--ln);background:var(--sf);color:var(--ink);padding:8px 16px;border-radius:99px;cursor:pointer;font-size:.92rem}
-.tabs button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tabs button[aria-pressed=true]{background:var(--br);color:var(--bi);border-color:var(--br)}
 .def{border-left:5px solid var(--br);background:var(--so);padding:12px 16px;border-radius:0 12px 12px 0;margin:14px 0}
 .m{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.15rem}
 table{border-collapse:collapse;width:100%;font-size:.93rem}th,td{border:1px solid var(--ln);padding:8px 10px;text-align:left}th{background:var(--so)}
@@ -74,11 +74,15 @@ details{border:1px solid var(--ln);border-radius:12px;background:var(--sf);margi
 @keyframes sw{0%{transform:rotate(-8deg)}35%{transform:rotate(5deg)}65%{transform:rotate(-2deg)}100%{transform:rotate(0)}}
 #hb{transform-origin:160px 62px;animation:sw 1.8s ease-out 1}
 @media(prefers-reduced-motion:reduce){#hb{animation:none}.beam,.bar2>i{transition:none}}
+.hero svg{background:linear-gradient(145deg,var(--so),color-mix(in srgb,var(--am) 32%,var(--sf)));border-radius:26px;padding:12px}
+.goals li:nth-child(odd){border-left:6px solid var(--p1)}.goals li:nth-child(even){border-left:6px solid var(--p2)}
+.steps li:nth-child(2)::before{background:var(--p1)}.steps li:nth-child(3)::before{background:var(--p2)}
+.ft{border-top:1px solid var(--ln);padding-top:18px;padding-bottom:28px;color:var(--mu);font-size:.9rem}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap bar" style="padding-bottom:10px">
-<span class="brand">Timbangan Aljabar<small>Matematika kelas VIII, Bab 3</small></span>
+<span class="brand">Timbangan Aljabar<small>SMP Negeri 1 Terusan Nunyai</small></span>
 <nav id="nav" aria-label="Menu utama"><button data-go="tujuan">Tujuan</button><button data-go="materi">Materi</button><button data-go="kuis">Kuis</button><button data-go="game">Game</button></nav>
 </div></header>
 <main>
@@ -97,6 +101,7 @@ details{border:1px solid var(--ln);border-radius:12px;background:var(--sf);margi
 <text x="270" y="148" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="24" fill="var(--ink)">8</text></g>
 <circle cx="160" cy="62" r="9" fill="var(--am)"/></svg></div>
 
+<div class="card" style="border-left:5px solid var(--am)"><b>SMP Negeri 1 Terusan Nunyai</b><br>Mata pelajaran Matematika, kelas VIII, Bab 3<br><span class="mu">Guru mata pelajaran: Hardiansyah, S.Pd</span></div>
 <h2>Tujuan pembelajaran</h2>
 <p class="mu">Centang tiap tujuan setelah kamu merasa sanggup melakukannya.</p>
 <ul class="goals" id="goals"></ul><p class="fb" id="gc"></p>
@@ -176,6 +181,7 @@ details{border:1px solid var(--ln);border-radius:12px;background:var(--sf);margi
 <div id="ge" class="card" hidden><div class="big" id="gx"></div><p id="gy"></p><button class="btn" id="ga">Main lagi</button></div>
 </div></section>
 </main>
+<footer class="wrap ft"><b>SMP Negeri 1 Terusan Nunyai</b><br>Guru mata pelajaran: Hardiansyah, S.Pd</footer>
 
 <script>
 const $=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)];
